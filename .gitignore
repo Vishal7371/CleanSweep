@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+env/
+.venv/
+.env
+
+# DuckDB
+*.duckdb
+*.duckdb.wal
+
+# dbt
+dbt_project/target/
+dbt_project/logs/
+dbt_project/.user.yml
+
+# Prefect
+.prefect/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets
+.env
+*.env
+secrets.yaml
