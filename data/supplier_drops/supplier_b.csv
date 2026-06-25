@@ -1,0 +1,14 @@
+product_name,price,quantity,order_date,supplier,category
+Office Chair,12000,10,2026-01-15,OfficeMart,Furniture
+Standing Desk,25000,5,2026-01-15,OfficeMart,Furniture
+Whiteboard 4x3,8500,3,2026-01-16,OfficeMart,Furniture
+Filing Cabinet,6000,8,2026-01-16,OfficeMart,Furniture
+Desk Lamp,1500,20,2026-01-17,OfficeMart,Accessories
+Ergonomic Cushion,2000,15,2026-01-17,OfficeMart,Accessories
+Monitor Stand,3500,12,2026-01-18,OfficeMart,Accessories
+Cable Organiser,500,50,2026-01-18,OfficeMart,Accessories
+Notebook Set,200,100,2026-01-19,OfficeMart,Stationery
+Pen Set,150,200,2026-01-19,OfficeMart,Stationery
+TOTAL SUMMARY,,,,, 
+Total Items,10,,,, 
+Total Value,59350,,,,

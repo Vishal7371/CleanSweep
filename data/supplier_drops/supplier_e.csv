@@ -1,0 +1,13 @@
+product_name,price,quantity,order_date,supplier,category
+Running Shoes,4500,30,2026-01-15,SportZone,Footwear
+Cricket Bat,3200,15,2026-01-15,SportZone,Sports
+Football,1200,25,2026-01-16,SportZone,Sports
+Yoga Mat,900,40,2026-01-16,SportZone,Fitness
+Dumbbells 5kg,1500,20,2026-01-17,SportZone,Fitness
+Running Shoes,4500,30,2026-01-15,SportZone,Footwear
+Jump Rope,350,60,2026-01-17,SportZone,Fitness
+Cricket Bat,3200,15,2026-01-15,SportZone,Sports
+Water Bottle,450,80,2026-01-18,SportZone,Accessories
+Gym Gloves,750,35,2026-01-18,SportZone,Fitness
+Yoga Mat,900,40,2026-01-16,SportZone,Fitness
+Protein Shaker,600,50,2026-01-19,SportZone,Accessories

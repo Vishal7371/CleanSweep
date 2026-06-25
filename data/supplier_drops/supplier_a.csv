@@ -1,0 +1,11 @@
+producto,precio,cantidad,fecha_pedido,proveedor,categoria
+Laptop Dell XPS,75000,5,2026-01-15,TechPro India,Electronics
+Wireless Mouse,1200,50,2026-01-15,TechPro India,Electronics
+USB Hub 4-port,850,30,15-01-2026,TechPro India,Electronics
+Mechanical Keyboard,3500,20,2026-01-16,TechPro India,Electronics
+Monitor 24inch,18000,8,2026/01/16,TechPro India,Electronics
+Webcam HD,2200,15,2026-01-17,TechPro India,Electronics
+HDMI Cable 2m,450,,2026-01-17,TechPro India,Accessories
+Laptop Stand,1800,12,2026-01-18,TechPro India,Accessories
+Laptop Bag,2500,25,2026-01-18,TechPro India,Accessories
+Charger USB-C,1100,40,2026-01-19,TechPro India,Electronics
