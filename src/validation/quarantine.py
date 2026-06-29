@@ -58,3 +58,5 @@ if __name__ == "__main__":
     result = con.execute("SELECT * FROM quarantine.bad_rows").df()
     con.close()
     print(result[["product_name", "quarantine_reason", "quarantined_at"]])
+
+
