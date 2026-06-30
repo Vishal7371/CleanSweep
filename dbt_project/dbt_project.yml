@@ -1,0 +1,25 @@
+name: 'cleansweep_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'cleansweep_dbt'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  cleansweep_dbt:
+    staging:
+      +schema: staging
+      +materialized: view
+    conformed:
+      +schema: conformed
+      +materialized: table

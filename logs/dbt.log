@@ -1,0 +1,31 @@
+[0m12:28:43.519047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110de40b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1119f6e40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1119f69c0>]}
+
+
+============================== 12:28:43.521896 | e1fab75e-e96d-4ed0-a971-489067e2b1fd ==============================
+[0m12:28:43.521896 [info ] [MainThread]: Running with dbt=1.11.11
+[0m12:28:43.522226 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt init cleansweep_dbt', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'version_check': 'True', 'profiles_dir': '/Users/vishal/.dbt', 'printer_width': '80', 'warn_error': 'None', 'cache_selected_only': 'False', 'partial_parse': 'True', 'debug': 'False', 'target_path': 'None', 'empty': 'None', 'write_json': 'True', 'no_print': 'None', 'use_colors': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'introspect': 'True', 'static_parser': 'True', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m12:28:43.531750 [info ] [MainThread]: Creating dbt configuration folder at /Users/vishal/.dbt
+[0m12:28:43.532853 [debug] [MainThread]: Starter project path: /Users/vishal/Documents/Internship Project/venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m12:28:43.538056 [info ] [MainThread]: 
+Your new dbt project "cleansweep_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:28:43.538319 [info ] [MainThread]: Setting up your profile.
+[0m12:29:36.919304 [info ] [MainThread]: Profile cleansweep_dbt written to /Users/vishal/.dbt/profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m12:29:36.949744 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 53.468803, "process_in_blocks": "0", "process_kernel_time": 0.229303, "process_mem_max_rss": "118816768", "process_out_blocks": "0", "process_user_time": 0.821259}
+[0m12:29:36.950176 [debug] [MainThread]: Command `dbt init` succeeded at 12:29:36.950070 after 53.47 seconds
+[0m12:29:36.950755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a92d20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11154a390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1113c38c0>]}
+[0m12:29:36.951447 [debug] [MainThread]: Flushing usage events
+[0m12:29:38.416496 [debug] [MainThread]: An error was encountered while trying to flush usage events
