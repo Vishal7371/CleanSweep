@@ -1,32 +1,9 @@
-# CleanSweep — Python Dependencies
-
-# Core data processing
-pandas==2.2.2
-openpyxl==3.1.2          # For reading .xlsx files
-chardet==5.2.0            # Auto-detect file encoding
-
-# Warehouse
-duckdb==0.10.3
-
-# Validation
-pandera==0.19.3
-
-# dbt
-dbt-core==1.8.3
-dbt-duckdb==1.8.1
-
-# Orchestration
-prefect==2.19.4
-
-# Dashboard
-streamlit==1.35.0
-plotly==5.22.0
-
-# Testing
-pytest==8.2.2
-pytest-cov==5.0.0
-
-# Utilities
-python-dotenv==1.0.1
-loguru==0.7.2              # Better logging
-rich==13.7.1               # Pretty terminal output
+chardet==7.4.3
+dbt-core==1.11.11
+dbt-duckdb==1.10.1
+duckdb==1.5.4
+loguru==0.7.3
+openpyxl==3.1.5
+pandas==3.0.3
+prefect==3.7.8
+streamlit==1.58.0
