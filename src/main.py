@@ -20,6 +20,8 @@ from datetime import datetime
 from ingestion.loader import load_all_suppliers, SUPPLIER_LOADERS
 from validation.validator import validate_dataframe
 from validation.quarantine import save_to_quarantine
+from observability.pipeline_logger import log_run
+
 
 
 def run_pipeline(drop_folder, db_path):
@@ -45,8 +47,10 @@ def run_pipeline(drop_folder, db_path):
         df = con.execute(f"SELECT * FROM raw.{supplier_name}").df()
         good_df, bad_df = validate_dataframe(df, supplier_name)
         save_to_quarantine(bad_df, db_path)
+        log_run(db_path, supplier_name, started_at, len(good_df), len(bad_df))
         total_good += len(good_df)
         total_bad += len(bad_df)
+
 
     con.close()
 
@@ -66,3 +70,5 @@ if __name__ == "__main__":
     db_path = str(project_root / "data" / "cleansweep.duckdb")
 
     run_pipeline(drop_folder, db_path)
+
+
