@@ -24,7 +24,7 @@ Supplier Files (5 formats)
         ↓
   Ingestion Layer    (file type detection, encoding, schema standardisation)
         ↓
-  Validation Layer   (Pandera schema + business rules)
+  Validation Layer   (Custom validator + business rules)
         ↓
   ┌──────────────────────────────┐
   │  Good rows → DuckDB warehouse │
@@ -44,34 +44,37 @@ Supplier Files (5 formats)
 
 | Component | Tool |
 |-----------|------|
-| Language | Python 3.11 |
+| Language | Python 3.12 |
 | Warehouse | DuckDB |
-| Validation | Pandera |
+| Validation | Custom (validator.py) |
 | Transformation | dbt-core + dbt-duckdb |
 | Orchestration | Prefect |
 | Dashboard | Streamlit |
 | Containerisation | Docker + Docker Compose |
-| CI/CD | GitHub Actions |
 
 ---
 
 ## 🚀 Quickstart
-
-> *(Will be updated as the project is built)*
 
 ```bash
 # 1. Clone the repo
 git clone https://github.com/Vishal7371/CleanSweep.git
 cd CleanSweep
 
-# 2. Install dependencies
+# 2. Create virtual environment
+python -m venv venv && source venv/bin/activate
+
+# 3. Install dependencies
 pip install -r requirements.txt
 
-# 3. Run the pipeline
+# 4. Run the pipeline
 python src/main.py
 
-# 4. View dashboard
-streamlit run dashboard/app.py
+# 5. View the dashboard
+streamlit run dashboard.py
+
+# OR run with Docker
+docker build -t cleansweep . && docker run --rm -v $(pwd)/data:/app/data cleansweep
 ```
 
 ---
@@ -106,9 +109,9 @@ CleanSweep/
 
 ## 📝 ADRs (Architecture Decision Records)
 
-- [ADR-001: Why DuckDB?](docs/adr/ADR-001-duckdb.md) *(coming Week 2)*
-- [ADR-002: Why Pandera?](docs/adr/ADR-002-pandera.md) *(coming Week 3)*
-- [ADR-003: Why Prefect?](docs/adr/ADR-003-prefect.md) *(coming Week 3)*
+- [ADR-001: Why DuckDB?](docs/adr/ADR-001-duckdb.md) ✅
+- [ADR-002: Why Custom Validation?](docs/adr/ADR-002-validation.md) ✅
+- [ADR-003: Why Prefect?](docs/adr/ADR-003-prefect.md) ✅
 
 ---
 
@@ -124,13 +127,20 @@ When a supplier adds a new column to their file, the pipeline:
 
 ## 📊 Dashboard
 
-*(Loom link + live URL — coming Week 4)*
+Run locally with:
+```bash
+streamlit run dashboard.py
+```
+Shows: valid rows, quarantined rows, pass rate, rows per supplier chart, quarantine reasons, and pipeline run history.
 
 ---
 
 ## ⚠️ Known Limitations
 
-*(Will be updated as the project progresses)*
+- DuckDB does not support concurrent writes (single-user only)
+- No cloud deployment yet — runs locally only
+- Schema drift detector alerts but does not auto-fix drift
+- Docker image does not include the Streamlit dashboard (pipeline only)
 
 ---
 
