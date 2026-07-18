@@ -1,0 +1,11 @@
+product_name,price,quantity,order_date,supplier,category
+Gaming Mouse,2500,30,2026-01-20,TechZone,Electronics
+Mechanical Keyboard,5500,15,2026-01-20,TechZone,Electronics
+USB Hub,1200,50,2026-01-21,TechZone,Electronics
+Monitor Stand,3000,20,2026-01-21,TechZone,Accessories
+Webcam HD,4500,12,2026-01-22,TechZone,Electronics
+Mouse Pad XL,800,60,2026-01-22,TechZone,Accessories
+HDMI Cable 2m,-500,25,2026-01-23,TechZone,Accessories
+LED Desk Lamp,1800,35,2026-01-23,TechZone,Accessories
+Cable Organizer,600,,2026-01-24,TechZone,Accessories
+Laptop Stand,4200,18,2026-01-24,TechZone,Accessories

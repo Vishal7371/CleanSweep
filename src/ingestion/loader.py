@@ -8,7 +8,7 @@ Supplier B - footer summary rows   - remove rows where price is not a number
 Supplier C - Excel merged cells    - skip first 2 rows
 Supplier D - mixed date formats    - standardise all dates to YYYY-MM-DD
 Supplier E - duplicate rows        - drop exact duplicates
- 
+Supplier F - clean standard CSV    - no transformation needed
 
 """
 
@@ -66,6 +66,12 @@ def load_supplier_e(filepath):
     logger.success(f"  Supplier E: {len(df)} rows kept, {original_count - len(df)} duplicates removed")
     return df
 
+def load_supplier_f(filepath):
+    logger.info("Loading Supplier F (standard CSV)...")
+    df = pd.read_csv(filepath, encoding="utf-8")
+    logger.success(f"  Supplier F: {len(df)} rows loaded")
+    return df
+
 def save_to_duckdb(df, supplier_name, db_path):
     table_name = f"raw.{supplier_name}"
     con = duckdb.connect(db_path)
@@ -83,6 +89,7 @@ SUPPLIER_LOADERS = {
     "supplier_c": load_supplier_c,
     "supplier_d": load_supplier_d,
     "supplier_e": load_supplier_e,
+    "supplier_f": load_supplier_f,
 }
 
 def load_all_suppliers(drop_folder, db_path):
